@@ -15,7 +15,7 @@ def login(REQUEST):
                     return HttpResponseRedirect(REQUEST.GET.get('next', '/'))
     response = HttpResponse()
     response.status_code = 401
-    response['WWW-Authenticate'] = 'Basic realm="Timetracking"'
+    response['WWW-Authenticate'] = 'Basic realm="Django Accounts"'
     return response
 
 def logout(REQUEST):
